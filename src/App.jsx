@@ -19,7 +19,7 @@ const handleAddTask = () => {
 
 const handleDeleteTask = (index) => {
   const updatedTasks = [...tasks];//haceme una copia de todas las tareas y guardalas acá
-  updatedTasks.splice(index, 1);//splica va a ubicar el elemento segun index y borrara 1 elemento. 
+  updatedTasks.splice(index, 1);//splice va a ubicar el elemento segun index y borrara 1 elemento. 
   setTasks(updatedTasks);
 };
 
