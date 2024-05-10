@@ -26,20 +26,26 @@ const handleDeleteTask = (index) => {
   return(
     <div>
       <h1>To Do List</h1>
-      <input
+      {/* <input
         type="text"
         placeholder="Agregar tarea"
         value={newTask}
         onChange={handleInputChange}
       />
-      <button onClick={handleAddTask}>Agregar tarea</button>
-      <ul>
+      <button >Agregar tarea</button> */}
+        <div class="d-flex">
+       
+        <input class="form-control me-sm-2" type="text" placeholder="Agregar Tarea"  value={newTask}
+        onChange={handleInputChange}/>
+        <button class="btn btn-secondary my-2 my-sm-0"  onClick={handleAddTask}>Agregar Tarea</button>
+      </div>
+      <ul class="list-group">
         {tasks.map((task, index) => (
        
-          <li key={index}>
+          <li class="list-group-item d-flex justify-content-between align-items-center" key={index}>
         
             {task} 
-            <button onClick={() => handleDeleteTask(index)}>Eliminar</button>
+            <button type="button" class="btn btn-danger" onClick={() => handleDeleteTask(index)}>Eliminar</button>
           </li>
         ))}
       </ul>
